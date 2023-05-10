@@ -1,4 +1,4 @@
-package ObjectModel
+package object
 
 type Object struct {
 	Description string
