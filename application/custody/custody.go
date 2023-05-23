@@ -4,7 +4,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/thetimhosking/jolt/enterprise/activity"
+	joltactivity "github.com/thetimhosking/jolt/enterprise/activity"
 )
 
 type Valid interface {
@@ -12,7 +12,7 @@ type Valid interface {
 }
 
 type Custody struct {
-	Activity    activity.Activity
+	Activity    joltactivity.Activity
 	ID          int
 	Description string
 	StartDate   time.Time
@@ -20,7 +20,7 @@ type Custody struct {
 
 func (c *Custody) OK() error {
 	if c.Description == "" {
-		return errors.New("Description required")
+		return errors.New("description required")
 	}
 	if c.StartDate.After(time.Now()) {
 		return errors.New("Custody start date cannot be in the future")

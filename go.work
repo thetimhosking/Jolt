@@ -1,0 +1,13 @@
+go 1.20
+
+use (
+	./application/custody
+	./application/incidentresponse
+	./enterprise/activity
+	./enterprise/event
+	./enterprise/facility
+	./enterprise/location
+	./enterprise/object
+	./enterprise/organization
+	./enterprise/person
+)
