@@ -3,6 +3,8 @@ package custody
 import (
 	"errors"
 	"time"
+
+	"github.com/thetimhosking/jolt/enterprise/activity"
 )
 
 type Valid interface {
@@ -10,6 +12,7 @@ type Valid interface {
 }
 
 type Custody struct {
+	Activity    activity.Activity
 	ID          int
 	Description string
 	StartDate   time.Time
@@ -25,7 +28,7 @@ func (c *Custody) OK() error {
 	return nil
 }
 
-func (c *CustodyCase) CustodyCaseAdd(d string) error {
+func (c *Custody) CustodyCaseAdd(d string) error {
 	s := c.Description
 	println(s)
 	return nil
