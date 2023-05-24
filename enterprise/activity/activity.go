@@ -1,6 +1,6 @@
-package Activity
+package activity
 
-type activity struct {
+type Activity struct {
 	Id               string `json:"id"`
 	ActivityNumber   string `json:"activity-number"`
 	PlannedStartDate string `json:"planned_start_date"`
@@ -31,6 +31,6 @@ type activityAction struct {
 type activityIssue struct {
 }
 
-func (a *activity) newActivity() {
+func (a *Activity) newActivity() {
 
 }
