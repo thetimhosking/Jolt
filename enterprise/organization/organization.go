@@ -1,5 +1,5 @@
 package organization
 
 type Organization struct {
-	ID
+	ID int64
 }
