@@ -1,7 +1,5 @@
 package person
 
-import "time"
-
 type Person struct {
 	Id int64
 }
@@ -14,10 +12,10 @@ type PersonName struct {
 	LastName      string
 	NameSuffix    string
 	NameTitle     string
-	ValidFromDate time.Date
-	ValidToDate   time.Date
+	ValidFromDate string
+	ValidToDate   string
 }
 
 func (p *Person) Validate() (bool, error) {
-
+	return true, nil
 }
